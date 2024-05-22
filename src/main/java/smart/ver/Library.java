@@ -59,7 +59,7 @@ public class Library {
           int inputNumber = scanner.nextInt();
           scanner.nextLine(); //入力後の改行をクリア
           resultList = bookList.stream()
-              .filter(book -> book.getNumber() == inputNumber)
+              .filter(book -> book.getIsbn() == inputNumber)
               .collect(Collectors.toList());
 
           // タイトル検索
@@ -86,7 +86,7 @@ public class Library {
         // 検索結果を出力
         if (!resultList.isEmpty()) {
           resultList.forEach(book -> System.out.println(
-              "番号：" + book.getNumber() + "　書籍タイトル：" + book.getTitle() + "　著者："
+              "番号：" + book.getIsbn() + "　書籍タイトル：" + book.getTitle() + "　著者："
                   + book.getAuthor()));
           System.out.println("条件に合致する書籍は" + resultList.size() + "冊です");
         } else {

@@ -5,18 +5,18 @@ package smart.ver;
  */
 public class Book {
 
-  private int number;
+  private int isbn;
   private String title;
   private String author;
 
-  public Book(int number, String title, String author) {
-    this.number = number;
+  public Book(int isbn, String title, String author) {
+    this.isbn = isbn;
     this.title = title;
     this.author = author;
   }
 
-  public int getNumber() {
-    return number;
+  public int getIsbn() {
+    return isbn;
   }
 
   public String getTitle() {
